@@ -179,7 +179,7 @@ class Robot(object):
     	state = tuple(float(x)/1000 for x in rsp[1:])
     else:
       state = 'INV_DATA'
-      rospy.logerr('Invalid data received from from Propellor')   
+      rospy.logerr('Invalid data received from Propellor')   
     
     return state
 
