@@ -137,7 +137,7 @@ class Robot(object):
           #rospy.loginfo("rsp=%s", str(rsp))
           done = True
         except Exception, err:
-          rospy.loginfo(str(err))
+          rospy.logerr(str(err))
           if rospy.get_rostime() - start_time > self.connection_timeout:
             raise rospy.ROSInterruptException("connection to robot seems broken")
           self.sci = None # assume serial interface is broken
@@ -179,7 +179,7 @@ class Robot(object):
     	state = tuple(float(x)/1000 for x in rsp[1:])
     else:
       state = 'INV_DATA'
-      rospy.logerr('Invalid data received from Propellor')   
+      rospy.logerr('Invalid data received from Propeller')   
     
     return state
 
@@ -388,7 +388,7 @@ class RobotNode(object):
         if current_time - last_cmd_vel_time > self.cmd_vel_timeout:
           req_cmd_vel = (0.0, 0.0, 0.0)
           if self.verbose:
-            rospy.loginfo('timeout')
+            rospy.logerr('timeout')
       
       # send velocity command & receive state
       old_state_time = last_state_time
@@ -433,6 +433,6 @@ if __name__ == '__main__':
   try:
     RobotNode(NAME)
   except rospy.ROSInterruptException, err:
-    rospy.loginfo(str(err))
+    rospy.logerr(str(err))
     rospy.loginfo("%s stopped working...", NAME)
  
