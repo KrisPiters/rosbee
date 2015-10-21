@@ -45,14 +45,14 @@ NavfnROS:
 TrajectoryPlannerROS:
 
 # Robot Configuration Parameters
-  acc_lim_x:                    0.5
+  acc_lim_x:                    1.25
   acc_lim_y:                    0.0
-  acc_lim_th:                   2.5
+  acc_lim_th:                   6.25
   max_vel_x:                    0.25
-  min_vel_x:                    0.15
-  max_vel_theta:                1.25
-  min_vel_theta:                -1.25
-  min_in_place_vel_theta:       0.4
+  min_vel_x:                    0.10 #0.15
+  max_vel_theta:                1.0 #1.25
+  min_vel_theta:                -1.0 #-1.25
+  min_in_place_vel_theta:       0.2 #0.4
   escape_vel:                   -0.1
   holonomic_robot:              false
 
@@ -92,4 +92,4 @@ TrajectoryPlannerROS:
 
 
 ### Map management parameters ###
-# Located in costmap_global_dynamic.yaml, costmap_global_static.yaml & _local.yaml
+# Located in costmap_global_dynamic.yaml, costmap_global_static.yaml & costmap_local.yaml
