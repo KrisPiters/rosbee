@@ -388,7 +388,7 @@ class RobotNode(object):
         if current_time - last_cmd_vel_time > self.cmd_vel_timeout:
           req_cmd_vel = (0.0, 0.0, 0.0)
           if self.verbose:
-            rospy.logerr('timeout')
+            rospy.logerr('Connection timeout')
       
       # send velocity command & receive state
       old_state_time = last_state_time
