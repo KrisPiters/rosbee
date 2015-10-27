@@ -15,9 +15,9 @@ sigma:                0.05 #0.025 #0.1 #0.05
 kernelSize:           1 
 lstep:                0.05
 astep:                0.05
-iterations:           10 #50 #5 
-lsigma:               0.075
-ogain:                3.0
+iterations:           5 #10 #50 #1 
+lsigma:               0.075 #0.01 #0.075
+ogain:                3.0 #2.5 #0.5 #10.0 #3.0
 lskip:                0
 
 minimumScore:         800.0 #500.0 #100.0 #50.0
@@ -32,7 +32,7 @@ angularUpdate:        0.25 #0.5 #0.25 #0.5
 temporalUpdate:      -1.0    
 
 resampleThreshold:    0.5    
-particles:            2 #100 #30 #100 #30 #100 #1 #30
+particles:            15 #50 #30 #10 #30 #100 #1
 
 # Initial Map Size & Resolution
 xmin:                -2.0
