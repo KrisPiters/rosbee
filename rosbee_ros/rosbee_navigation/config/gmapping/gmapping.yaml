@@ -28,7 +28,7 @@ str:                  0.1
 stt:                  0.2
 
 linearUpdate:         1.0      
-angularUpdate:        0.25 #0.5 #0.25 #0.5 
+angularUpdate:        0.01 #1.57 #0.25 #0.5 #0.25 #0.5 
 temporalUpdate:      -1.0    
 
 resampleThreshold:    0.5    
