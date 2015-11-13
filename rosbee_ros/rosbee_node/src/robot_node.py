@@ -419,7 +419,6 @@ class RobotNode(object):
 
       r.sleep()
             
-  def start(self):
     self.robot.start()
     rospy.loginfo('robot node started')
     
