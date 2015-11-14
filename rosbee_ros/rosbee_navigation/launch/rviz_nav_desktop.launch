@@ -1,0 +1,5 @@
+<launch>
+
+	<node name="rviz" pkg="rviz" type="rviz" args="-d $(find rosbee_navigation)/config/rviz/rviz_nav_desktop.rviz"/>
+
+</launch>
