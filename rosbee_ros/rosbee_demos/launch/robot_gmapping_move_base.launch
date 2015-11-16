@@ -1,0 +1,9 @@
+<launch>
+
+	<include file="$(find rosbee_bringup)/launch/minimal.launch"/>
+	
+	<include file="$(find rosbee_bringup)/launch/kinect_laser.launch"/>
+
+	<include file="$(find rosbee_navigation)/launch/move_base_gmapping_demo.launch"/>
+
+</launch>

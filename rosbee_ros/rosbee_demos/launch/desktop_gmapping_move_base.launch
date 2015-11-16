@@ -1,0 +1,5 @@
+<launch>
+
+	<include file="$(find rosbee_navigation)/launch/rviz_nav_desktop.launch"/>
+
+</launch>
